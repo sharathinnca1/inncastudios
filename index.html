@@ -20,10 +20,28 @@
 
 <body>
   <!-- Header -->
-  <header class="header" id="top">
+<header class="header" id="top">
+  <div class="container header-row">
     <a class="brand" href="#top" aria-label="Innca Studio home">
-  <img class="brand-logo" src="assets/images/logo.svg" alt="Innca Studio logo" />
-</a>
+      <img class="brand-logo" src="assets/images/logo.svg" alt="Innca Studio logo" />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false">
+      <span class="nav-toggle-lines" aria-hidden="true"></span>
+      <span class="sr-only">Toggle menu</span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#story">Our Story</a>
+      <a href="#journey">Your Journey</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#stories">Client Stories</a>
+      <a href="#contact">Contact Us</a>
+      <a class="btn btn-small" href="#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
 
 
       <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false">
