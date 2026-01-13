@@ -38,3 +38,419 @@
         <a href="#gallery">Gallery</a>
         <a href="#stories">Client Stories</a>
         <a href="#contact">Contact Us</a>
+        <a class="btn btn-small" href="#contact">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Modular Interiors • Turnkey Execution</p>
+        <h1>Design that feels premium. Delivery that stays predictable.</h1>
+        <p class="hero-sub">
+          Kitchens, wardrobes and full-home interiors with clear scope, material lock, production checks and smooth installation.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#gallery">View work</a>
+          <a class="btn btn-ghost" href="#journey">How it works</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge">
+            <div class="badge-num">10+</div>
+            <div class="badge-label">Years</div>
+          </div>
+          <div class="badge">
+            <div class="badge-num">2,000+</div>
+            <div class="badge-label">Homes delivered</div>
+          </div>
+          <div class="badge">
+            <div class="badge-num">10 yrs</div>
+            <div class="badge-label">Warranty*</div>
+          </div>
+        </div>
+
+        <p class="fine">
+          *Replace numbers and warranty terms to match your actual policy.
+        </p>
+      </div>
+
+      <!-- Enquiry card -->
+      <div class="hero-card">
+        <div class="card">
+          <h2 class="card-title">Start with your requirement</h2>
+          <p class="card-sub">Fill this and click “Get a callback”. It will open WhatsApp with your details.</p>
+
+          <form id="enquiryForm" class="form">
+            <label class="label">
+              Property type <span class="req">*</span>
+              <select name="propertyType" required>
+                <option value="" selected disabled>Select</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Independent Home</option>
+                <option>Office</option>
+                <option>Commercial Space</option>
+              </select>
+            </label>
+
+            <label class="label">
+              Interested in <span class="req">*</span>
+              <select name="interest" required>
+                <option value="" selected disabled>Select</option>
+                <option>Kitchen</option>
+                <option>Wardrobe</option>
+                <option>Full Home Interiors</option>
+                <option>Living / TV Unit</option>
+                <option>Bedroom Package</option>
+              </select>
+            </label>
+
+            <div class="grid2">
+              <label class="label">
+                Name <span class="req">*</span>
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+
+              <label class="label">
+                Phone <span class="req">*</span>
+                <input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required />
+              </label>
+            </div>
+
+            <label class="label">
+              City
+              <input name="city" type="text" placeholder="Bengaluru" />
+            </label>
+
+            <button class="btn btn-full" type="submit">Get a callback</button>
+
+            <p class="fine">
+              Static website: no database. Lead capture is via WhatsApp. If you want form submissions to email, use Formspree later.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Story</h2>
+        <p>
+          We design interiors around real life, not just renders. The goal is simple: a home that looks intentional, works daily, and gets delivered without chaos.
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-copy">
+          <p>
+            Clients usually want three things at the same time: strong design, controlled cost, and reliable timelines. Most interior experiences break because scope keeps drifting and decisions stay open.
+          </p>
+          <p>
+            Our approach is stage-based: finalize layout, lock materials, produce with checks, then install with a clear site plan. It keeps design intent and execution aligned.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-ico" aria-hidden="true">◆</div>
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Design legacy</div>
+          </div>
+          <div class="stat">
+            <div class="stat-ico" aria-hidden="true">◆</div>
+            <div class="stat-num">2,000+</div>
+            <div class="stat-label">Happy homes</div>
+          </div>
+          <div class="stat">
+            <div class="stat-ico" aria-hidden="true">◆</div>
+            <div class="stat-num">One-stop</div>
+            <div class="stat-label">Design to install</div>
+          </div>
+          <div class="stat">
+            <div class="stat-ico" aria-hidden="true">◆</div>
+            <div class="stat-num">QC</div>
+            <div class="stat-label">Factory and site</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Journey -->
+  <section class="section section-alt" id="journey">
+    <div class="container">
+      <div class="section-head">
+        <h2>Your Journey</h2>
+        <p>The path to your home, broken into simple stages. Switch steps to see details.</p>
+      </div>
+
+      <div class="journey">
+        <div class="journey-tabs" role="tablist" aria-label="Journey steps">
+          <button class="tab active" data-step="1" role="tab" aria-selected="true">1</button>
+          <button class="tab" data-step="2" role="tab" aria-selected="false">2</button>
+          <button class="tab" data-step="3" role="tab" aria-selected="false">3</button>
+          <button class="tab" data-step="4" role="tab" aria-selected="false">4</button>
+        </div>
+
+        <div class="journey-panel">
+          <div class="journey-copy">
+            <h3 id="journeyTitle">Consultation and planning</h3>
+            <p id="journeyText">
+              Share your floor plan and requirements. We align on budget range, scope, and feasibility before design goes deep.
+            </p>
+            <a class="btn btn-small" href="#contact">Book a consultation</a>
+
+            <p class="fine">
+              Timelines depend on client availability, selections, and payment milestones.
+            </p>
+          </div>
+
+          <div class="journey-media">
+            <img id="journeyImg" alt="Journey illustration" loading="lazy"
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <p>Replace these images with your actual project photos. Keep the same card layout.</p>
+      </div>
+
+      <div class="carousel">
+        <button class="car-btn" type="button" data-scroll="left" aria-label="Scroll gallery left">‹</button>
+        <div class="car-track" id="galleryTrack">
+          <article class="work">
+            <img loading="lazy" alt="Project image" src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1400&q=80">
+            <div class="work-meta">
+              <div class="work-title">2BHK, Bengaluru</div>
+              <div class="work-sub">Warm palette and storage-first planning</div>
+            </div>
+          </article>
+
+          <article class="work">
+            <img loading="lazy" alt="Project image" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80">
+            <div class="work-meta">
+              <div class="work-title">3BHK, Hyderabad</div>
+              <div class="work-sub">Clean lines, lighting integration</div>
+            </div>
+          </article>
+
+          <article class="work">
+            <img loading="lazy" alt="Project image" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80">
+            <div class="work-meta">
+              <div class="work-title">Villa, Bengaluru</div>
+              <div class="work-sub">Living wall and custom cabinetry</div>
+            </div>
+          </article>
+
+          <article class="work">
+            <img loading="lazy" alt="Project image" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80">
+            <div class="work-meta">
+              <div class="work-title">Kitchen upgrade</div>
+              <div class="work-sub">Workflow optimized layout</div>
+            </div>
+          </article>
+
+          <article class="work">
+            <img loading="lazy" alt="Project image" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1400&q=80">
+            <div class="work-meta">
+              <div class="work-title">Wardrobe wall</div>
+              <div class="work-sub">Accessories planned for daily use</div>
+            </div>
+          </article>
+        </div>
+        <button class="car-btn" type="button" data-scroll="right" aria-label="Scroll gallery right">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Stories -->
+  <section class="section section-alt" id="stories">
+    <div class="container">
+      <div class="section-head">
+        <h2>Client Stories</h2>
+        <p>Use videos or short highlights. These can link to your YouTube or Instagram.</p>
+      </div>
+
+      <div class="cards-3">
+        <div class="story-card">
+          <div class="story-top">
+            <div class="story-pill">Video</div>
+            <div class="story-title">Full home walkthrough</div>
+          </div>
+          <p class="story-text">A quick before-after and how the scope was controlled from design to install.</p>
+          <a class="btn btn-small btn-ghost" href="https://www.youtube.com/@Innca.studio" target="_blank" rel="noopener">Watch</a>
+        </div>
+
+        <div class="story-card">
+          <div class="story-top">
+            <div class="story-pill">Review</div>
+            <div class="story-title">Kitchen delivery</div>
+          </div>
+          <p class="story-text">Focus on finishing, hardware, and installation discipline.</p>
+          <a class="btn btn-small btn-ghost" href="#reviews">Read</a>
+        </div>
+
+        <div class="story-card">
+          <div class="story-top">
+            <div class="story-pill">Case</div>
+            <div class="story-title">Wardrobe planning</div>
+          </div>
+          <p class="story-text">How storage zoning and shutter type decisions were made.</p>
+          <a class="btn btn-small btn-ghost" href="#journey">See steps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>What clients say</h2>
+        <p>Replace these samples with real testimonials once you have permission.</p>
+      </div>
+
+      <div class="rating-bar">
+        <div class="rating-score">4.4</div>
+        <div class="rating-meta">
+          <div class="rating-stars" aria-label="Rating stars">★★★★★</div>
+          <div class="rating-sub">Based on Google reviews</div>
+        </div>
+      </div>
+
+      <div class="cards-3">
+        <article class="review">
+          <div class="review-head">
+            <div class="avatar">P</div>
+            <div>
+              <div class="review-name">Pooja</div>
+              <div class="review-date">Recent</div>
+            </div>
+          </div>
+          <p class="review-text" data-collapsed="true">
+            Great coordination from design to execution. The finishing was clean and the team closed snags quickly.
+          </p>
+          <button class="link-btn" type="button" data-readmore>Read more</button>
+        </article>
+
+        <article class="review">
+          <div class="review-head">
+            <div class="avatar">S</div>
+            <div>
+              <div class="review-name">Supriya</div>
+              <div class="review-date">Recent</div>
+            </div>
+          </div>
+          <p class="review-text" data-collapsed="true">
+            The material selection was clear and what was committed in the design stage matched the final delivery.
+          </p>
+          <button class="link-btn" type="button" data-readmore>Read more</button>
+        </article>
+
+        <article class="review">
+          <div class="review-head">
+            <div class="avatar">K</div>
+            <div>
+              <div class="review-name">Kiran</div>
+              <div class="review-date">Recent</div>
+            </div>
+          </div>
+          <p class="review-text" data-collapsed="true">
+            Professional team and consistent updates. The overall experience stayed predictable and stress-free.
+          </p>
+          <button class="link-btn" type="button" data-readmore>Read more</button>
+        </article>
+      </div>
+
+      <div class="center">
+        <a class="btn" href="#contact">Get your quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact Us</h2>
+        <p>Update address, phone and email to your real details.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3 class="h3">Head Office</h3>
+          <p class="muted">
+            2989, 12th Main Rd, HAL 2nd Stage, Indiranagar,<br>
+            Bengaluru, Karnataka
+          </p>
+
+          <div class="contact-row">
+            <div class="contact-k">Email</div>
+            <div class="contact-v"><a href="mailto:sales@inncastudios.com">sales@inncastudios.com</a></div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-k">Phone</div>
+            <div class="contact-v"><a href="tel:+916364464692">+91 63644 64692</a></div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-small" href="#" id="whatsAppBtn">WhatsApp</a>
+            <a class="btn btn-small btn-ghost" href="#top">Back to top</a>
+          </div>
+
+          <p class="fine">
+            Only the website URL is inncastudios.com. The brand name shown is Innca Studio.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Other locations</h3>
+          <ul class="list">
+            <li>Yelahanka</li>
+            <li>Proddatur</li>
+            <li>Hyderabad</li>
+          </ul>
+
+          <h3 class="h3">Follow</h3>
+          <div class="social">
+            <a href="https://www.youtube.com/@Innca.studio" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/inncastudio/?hl=en" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/inncastudio/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://in.linkedin.com/company/innca-studio" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Innca Studio</div>
+      <div class="footer-links">
+        <a href="#story">Our Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
