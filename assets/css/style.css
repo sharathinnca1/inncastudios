@@ -80,6 +80,17 @@ a:hover{ opacity:.92; }
   color: var(--accent2);
 }
 
+.brand-logo{
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 980px){
+  .brand-logo{ height: 36px; }
+}
+
+
 .brand-text{ font-size:15px; }
 
 .nav{
