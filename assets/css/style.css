@@ -81,13 +81,13 @@ a:hover{ opacity:.92; }
 }
 
 .brand-logo{
-  height: 44px;
+  height: 46px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 980px){
-  .brand-logo{ height: 44px; }
+  .brand-logo{ height: 36px; }
 }
 
 
