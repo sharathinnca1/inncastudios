@@ -8,7 +8,7 @@ if (toggle && nav) {
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  nav.querySelectorAll("a").forEach(a => {
+  nav.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
@@ -20,14 +20,33 @@ if (toggle && nav) {
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
-// WhatsApp lead capture
-const WHATSAPP_NUMBER = "916364464692"; // change to your number, no + sign
+// Lead capture
+const WHATSAPP_NUMBER = "916364464692"; // no + sign
+const SHEET_WEBAPP_URL =
+  "https://script.google.com/macros/s/AKfycby1fge-Q5GIPD7uRqRf3bTokLaDqGv_yDIDib8U5N_nHuqjLDzn0W2Lwt70jxlaT9DdZw/exec";
+
 const enquiryForm = document.getElementById("enquiryForm");
 const waBtn = document.getElementById("whatsAppBtn");
 
 function openWhatsApp(message) {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank", "noopener");
+}
+
+async function sendToGoogleSheet(payload) {
+  // Apps Script doPost reads form-url-encoded data as e.parameter
+  const body = new URLSearchParams(payload);
+
+  // "no-cors" avoids browser CORS errors for Apps Script webapps.
+  // You won't be able to read the response, but the row will still be added.
+  await fetch(SHEET_WEBAPP_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+    },
+    body
+  });
 }
 
 if (waBtn) {
@@ -38,7 +57,7 @@ if (waBtn) {
 }
 
 if (enquiryForm) {
-  enquiryForm.addEventListener("submit", (e) => {
+  enquiryForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const data = new FormData(enquiryForm);
@@ -53,6 +72,23 @@ if (enquiryForm) {
       return;
     }
 
+    // 1) Send to Google Sheet first
+    try {
+      await sendToGoogleSheet({
+        propertyType,
+        interest,
+        name,
+        phone,
+        city,
+        // optional honeypot field (safe even if you didn't add it in HTML)
+        website: ""
+      });
+    } catch (err) {
+      // Even if sheet fails, WhatsApp should still open
+      console.log("Sheet write failed:", err);
+    }
+
+    // 2) Continue WhatsApp flow
     const msg =
       `Hi Innca Studio,\n` +
       `I would like a callback.\n\n` +
@@ -119,7 +155,7 @@ tabs.forEach((t) => {
 
 // Gallery carousel buttons
 const track = document.getElementById("galleryTrack");
-document.querySelectorAll(".car-btn").forEach(btn => {
+document.querySelectorAll(".car-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     if (!track) return;
     const dir = btn.getAttribute("data-scroll");
@@ -129,7 +165,7 @@ document.querySelectorAll(".car-btn").forEach(btn => {
 });
 
 // Review read more (simple toggle)
-document.querySelectorAll("[data-readmore]").forEach(btn => {
+document.querySelectorAll("[data-readmore]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const card = btn.closest(".review");
     const p = card ? card.querySelector(".review-text") : null;
